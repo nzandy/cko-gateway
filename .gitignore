@@ -12,3 +12,4 @@
 /src/PaymentGateway/Checkout.PaymentGateway.Models/obj
 /src/PaymentGateway/Checkout.PaymentGateway.Services/bin/Debug/net5.0
 /src/PaymentGateway/Checkout.PaymentGateway.Services/obj
+/src/PaymentGateway/Checkout.PaymentGateway.Domain/bin/Debug/net5.0

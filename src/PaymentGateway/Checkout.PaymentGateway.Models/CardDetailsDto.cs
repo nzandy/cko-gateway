@@ -2,7 +2,7 @@
 
 namespace Checkout.PaymentGateway.Models
 {
-	public class CardDetails
+	public class CardDetailsDto
 	{
 		[Required]
 		public string CardNumber { get; set; }

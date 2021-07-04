@@ -1,8 +1,9 @@
 ﻿namespace Checkout.PaymentGateway.Models
 {
-	public class PaymentRequest
+	public class PaymentDto
 	{
-		public CardDetails CardDetails { get; set; }
+		public int MerchantId { get; set; }
+		public CardDetailsDto CardDetails { get; set; }
 		public decimal Amount { get; set; }
 		public string Currency { get; set; }
 	}

@@ -6,6 +6,6 @@ namespace Checkout.PaymentGateway.Services
 	public interface IPaymentService
 	{
 		//TODO: Make async
-		public bool AttemptPayment(PaymentRequest paymentRequest);
+		public bool AttemptPayment(PaymentDto paymentRequest);
 	}
 }
