@@ -1,6 +1,7 @@
 ﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
 	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=3aaaf8d1_002D4129_002D4166_002Db986_002D38e905934168/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="Should_Return_201Response_WithCorrect_ID_WhenPaymentProcessedSuccessfully" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
   &lt;TestAncestor&gt;&#xD;
-    &lt;TestId&gt;NUnit3x::644586C8-A770-4C6D-BF90-BFE979441AEB::net5.0::Checkout.PaymentGateway.Api.UnitTests.PaymentsControllerTests.Tests.Should_Return_201Response_WithCorrect_ID_WhenPaymentProcessedSuccessfully&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::644586C8-A770-4C6D-BF90-BFE979441AEB::net5.0::Checkout.PaymentGateway.Api.UnitTests.PaymentsControllerTests.GetPaymentTests.ShouldReturnExpectedDto_WhenDtoExistsMatchingId&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::644586C8-A770-4C6D-BF90-BFE979441AEB::net5.0::Checkout.PaymentGateway.Api.UnitTests.PaymentsControllerTests.GetPaymentTests.ShouldReturn404_WhenNoPaymentFoundMatchingId&lt;/TestId&gt;&#xD;
   &lt;/TestAncestor&gt;&#xD;
 &lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>

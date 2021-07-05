@@ -11,7 +11,7 @@ using NUnit.Framework;
 
 namespace Checkout.PaymentGateway.Api.UnitTests.PaymentsControllerTests
 {
-	public class Tests
+	public class ProcessPaymentTests
 	{
 		private PaymentsController _sut;
 		private Mock<IPaymentService> _paymentServiceMock;
