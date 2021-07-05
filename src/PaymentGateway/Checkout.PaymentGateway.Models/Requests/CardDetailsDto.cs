@@ -9,11 +9,9 @@ namespace Checkout.PaymentGateway.Models.Requests
 		[CreditCard]
 		public string CardNumber { get; set; }
 
-		[Required]
 		[YearIsCurrentOrFuture]
 		public int ExpiryYear { get; set; }
 
-		[Required]
 		[Range(1, 12)]
 		public int ExpiryMonth { get; set; }
 	}

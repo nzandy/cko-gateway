@@ -19,3 +19,5 @@
 /src/Shared/Checkout.Shared.Models/obj
 /tests/Checkout.PaymentGateway.Api.UnitTests/bin/Debug/net5.0
 /tests/Checkout.PaymentGateway.Api.UnitTests/obj
+/tests/Checkout.PaymentGateway.Models.UnitTests/bin/Debug/net5.0
+/tests/Checkout.PaymentGateway.Models.UnitTests/obj

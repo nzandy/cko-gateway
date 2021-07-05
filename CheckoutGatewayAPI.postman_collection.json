@@ -1,0 +1,58 @@
+{
+	"info": {
+		"_postman_id": "cd55098e-44e0-4df0-ba78-25481ab23daf",
+		"name": "CheckoutGatewayAPI",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Post Payment",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"amount\": 20.0,\r\n    \"currency\": \"AUD\",\r\n    \"cardDetails\": {\r\n        \"cardNumber\": \"4621977792064149\",\r\n        \"expiryYear\": 2021,\r\n        \"expiryMonth\": 12\r\n    },\r\n    \"merchantId\": 2\r\n}"
+				},
+				"url": {
+					"raw": "https://localhost:44326/payments",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44326",
+					"path": [
+						"payments"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Payment",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44326/payments/59121407-c8c7-4c83-b207-32855c8eec2a",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44326",
+					"path": [
+						"payments",
+						"59121407-c8c7-4c83-b207-32855c8eec2a"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

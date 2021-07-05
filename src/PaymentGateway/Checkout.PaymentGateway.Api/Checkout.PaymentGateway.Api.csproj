@@ -11,5 +11,9 @@
   <ItemGroup>
     <ProjectReference Include="..\Checkout.PaymentGateway.Services\Checkout.PaymentGateway.Services.csproj" />
   </ItemGroup>
+  <PropertyGroup>
+	<GenerateDocumentationFile>true</GenerateDocumentationFile>
+	<NoWarn>$(NoWarn);1591</NoWarn>
+  </PropertyGroup>
 
 </Project>

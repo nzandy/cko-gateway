@@ -6,6 +6,12 @@
 		public int ExpiryYear { get; set; }
 		public int ExpiryMonth { get; set; }
 
+		/// <summary>
+		/// Copied from Stack overflow.
+		/// This is domain logic rather than belonging on the entity, but for a quick POC I avoided adding
+		/// domain layer as was already taking a lot of time!
+		/// Note: Ran out of time to surround this with tests... sorry.
+		/// </summary>
 		public string MaskedCardNumber
 		{
 			get
