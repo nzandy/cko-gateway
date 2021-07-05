@@ -7,13 +7,21 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "PaymentGateway", "PaymentGa
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Checkout.PaymentGateway.Api", "src\PaymentGateway\Checkout.PaymentGateway.Api\Checkout.PaymentGateway.Api.csproj", "{926A52A7-0050-41CE-9EAF-FB4ED66E2041}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Checkout.PaymentGateway.Services", "src\PaymentGateway\Checkout.PaymentGateway.Services\Checkout.PaymentGateway.Services.csproj", "{DF74A928-3D18-49E9-A9FD-3C3D0FF74D4D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Checkout.PaymentGateway.Services", "src\PaymentGateway\Checkout.PaymentGateway.Services\Checkout.PaymentGateway.Services.csproj", "{DF74A928-3D18-49E9-A9FD-3C3D0FF74D4D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Checkout.PaymentGateway.Models", "src\PaymentGateway\Checkout.PaymentGateway.Models\Checkout.PaymentGateway.Models.csproj", "{C7D1BD47-477E-4B34-96E6-28E07D8592F1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Checkout.PaymentGateway.Models", "src\PaymentGateway\Checkout.PaymentGateway.Models\Checkout.PaymentGateway.Models.csproj", "{C7D1BD47-477E-4B34-96E6-28E07D8592F1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Checkout.PaymentGateway.DataAccess", "src\PaymentGateway\Checkout.PaymentGateway.DataAccess\Checkout.PaymentGateway.DataAccess.csproj", "{72250E96-5D59-4030-84A9-88FB78074A6E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Checkout.PaymentGateway.DataAccess", "src\PaymentGateway\Checkout.PaymentGateway.DataAccess\Checkout.PaymentGateway.DataAccess.csproj", "{72250E96-5D59-4030-84A9-88FB78074A6E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Checkout.PaymentGateway.Domain", "src\PaymentGateway\Checkout.PaymentGateway.Domain\Checkout.PaymentGateway.Domain.csproj", "{C4C6EB61-9515-4454-817E-4A50EB2014AB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Checkout.PaymentGateway.Domain", "src\PaymentGateway\Checkout.PaymentGateway.Domain\Checkout.PaymentGateway.Domain.csproj", "{C4C6EB61-9515-4454-817E-4A50EB2014AB}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "AcquiringBank", "AcquiringBank", "{D82D3657-1881-4F06-9E96-EE8493BE75E6}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Checkout.AcquiringBank.Services", "src\AcquringBank\ThirdParty.AcquiringBank.Services\Checkout.AcquiringBank.Services.csproj", "{61DC5043-9F74-4705-A415-320A918913C5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Shared", "Shared", "{C4312387-556B-41B3-A249-228B78290C29}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Checkout.Shared.Models", "src\Shared\Checkout.Shared.Models\Checkout.Shared.Models.csproj", "{82B8AC93-CB34-4B8E-AA01-335234A214CF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -41,6 +49,14 @@ Global
 		{C4C6EB61-9515-4454-817E-4A50EB2014AB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C4C6EB61-9515-4454-817E-4A50EB2014AB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C4C6EB61-9515-4454-817E-4A50EB2014AB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{61DC5043-9F74-4705-A415-320A918913C5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{61DC5043-9F74-4705-A415-320A918913C5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{61DC5043-9F74-4705-A415-320A918913C5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{61DC5043-9F74-4705-A415-320A918913C5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{82B8AC93-CB34-4B8E-AA01-335234A214CF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{82B8AC93-CB34-4B8E-AA01-335234A214CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{82B8AC93-CB34-4B8E-AA01-335234A214CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{82B8AC93-CB34-4B8E-AA01-335234A214CF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -51,6 +67,8 @@ Global
 		{C7D1BD47-477E-4B34-96E6-28E07D8592F1} = {1D39F058-789F-4AF3-81AB-7D1896EE4DE2}
 		{72250E96-5D59-4030-84A9-88FB78074A6E} = {1D39F058-789F-4AF3-81AB-7D1896EE4DE2}
 		{C4C6EB61-9515-4454-817E-4A50EB2014AB} = {1D39F058-789F-4AF3-81AB-7D1896EE4DE2}
+		{61DC5043-9F74-4705-A415-320A918913C5} = {D82D3657-1881-4F06-9E96-EE8493BE75E6}
+		{82B8AC93-CB34-4B8E-AA01-335234A214CF} = {C4312387-556B-41B3-A249-228B78290C29}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {50D3B8F8-6253-4F49-9F0B-E385999ED8BB}

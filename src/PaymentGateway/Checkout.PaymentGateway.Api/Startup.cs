@@ -1,3 +1,6 @@
+using Checkout.AcquiringBank.Services;
+using Checkout.PaymentGateway.DataAccess;
+using Checkout.PaymentGateway.Domain;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
@@ -17,10 +20,8 @@ namespace Checkout.PaymentGateway.Api
 
 		public IConfiguration Configuration { get; }
 
-		// This method gets called by the runtime. Use this method to add services to the container.
 		public void ConfigureServices(IServiceCollection services)
 		{
-
 			services.AddControllers();
 			services.AddSwaggerGen(c =>
 			{
@@ -28,9 +29,11 @@ namespace Checkout.PaymentGateway.Api
 			});
 
 			services.AddScoped<IPaymentService, PaymentService>();
+			services.AddScoped<IAcquiringBankService, MockAcquiringBankService>();
+			services.AddSingleton<IGenericRepository<CardDetails>, GenericRepository<CardDetails>>();
+			services.AddSingleton<IGenericRepository<Payment>, GenericRepository<Payment>>();
 		}
 
-		// This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
 		public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
 		{
 			if (env.IsDevelopment())

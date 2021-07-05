@@ -1,11 +1,13 @@
 ﻿using System;
+using System.Threading.Tasks;
 using Checkout.PaymentGateway.Domain;
 
 namespace Checkout.PaymentGateway.DataAccess
 {
 	public interface IGenericRepository<T> where T : Entity
 	{
-		T GetById(Guid id);
-		void Insert(T obj);
+		Task<T> GetByIdAsync(Guid id);
+		Task InsertAsync(T obj);
+		Task UpdateAsync(T obj);
 	}
 }

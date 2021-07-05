@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace Checkout.PaymentGateway.Models
+namespace Checkout.PaymentGateway.Models.Requests
 {
 	public class CardDetailsDto
 	{

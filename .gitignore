@@ -13,3 +13,7 @@
 /src/PaymentGateway/Checkout.PaymentGateway.Services/bin/Debug/net5.0
 /src/PaymentGateway/Checkout.PaymentGateway.Services/obj
 /src/PaymentGateway/Checkout.PaymentGateway.Domain/bin/Debug/net5.0
+/src/AcquringBank/ThirdParty.AcquiringBank.Services/bin/Debug/net5.0
+/src/AcquringBank/ThirdParty.AcquiringBank.Services/obj
+/src/Shared/Checkout.Shared.Models/bin/Debug/net5.0
+/src/Shared/Checkout.Shared.Models/obj

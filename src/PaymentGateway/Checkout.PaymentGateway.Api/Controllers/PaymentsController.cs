@@ -1,4 +1,6 @@
-﻿using Checkout.PaymentGateway.Models;
+﻿using System;
+using System.Threading.Tasks;
+using Checkout.PaymentGateway.Models.Requests;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Checkout.PaymentGateway.Services;
@@ -19,10 +21,22 @@ namespace Checkout.PaymentGateway.Api.Controllers
 		}
 
 		[HttpPost]
-		public IActionResult SubmitPayment([FromBody]PaymentDto paymentRequest)
+		public async Task<IActionResult> SubmitPayment([FromBody]SubmitPaymentRequestDto paymentRequest)
 		{
-			_paymentService.AttemptPayment(paymentRequest);
-			return Ok();
+			var result = await _paymentService.AttemptPaymentAsync(paymentRequest);
+			return CreatedAtAction(nameof(GetPayment), new { id = result.PaymentId }, result);
+		}
+
+		[HttpGet]
+		[Route("[controller]/{id:guid}")]
+		public async Task<IActionResult> GetPayment(Guid id)
+		{
+			var result = await _paymentService.GetPaymentAsync(id);
+			if (result == null)
+			{
+				return NotFound();
+			}
+			return Ok(result);
 		}
 	}
 }

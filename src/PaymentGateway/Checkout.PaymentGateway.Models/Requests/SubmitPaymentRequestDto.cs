@@ -1,6 +1,6 @@
-﻿namespace Checkout.PaymentGateway.Models
+﻿namespace Checkout.PaymentGateway.Models.Requests
 {
-	public class PaymentDto
+	public class SubmitPaymentRequestDto
 	{
 		public int MerchantId { get; set; }
 		public CardDetailsDto CardDetails { get; set; }

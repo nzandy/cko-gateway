@@ -1,11 +1,12 @@
 ﻿using Checkout.PaymentGateway.Domain;
 using Checkout.PaymentGateway.Models;
+using Checkout.PaymentGateway.Models.Requests;
 
 namespace Checkout.PaymentGateway.Services.Extensions
 {
 	public static class PaymentDtoExtensions
 	{
-		public static CardDetails ToCardDetailsDomainObject(this PaymentDto dto)
+		public static CardDetails ToCardDetailsDomainObject(this SubmitPaymentRequestDto dto)
 		{
 			return new CardDetails
 			{
@@ -16,7 +17,7 @@ namespace Checkout.PaymentGateway.Services.Extensions
 			};
 		}
 
-		public static Payment ToPaymentDomainObject(this PaymentDto dto)
+		public static Payment ToPaymentDomainObject(this SubmitPaymentRequestDto dto)
 		{
 			return new Payment
 			{
