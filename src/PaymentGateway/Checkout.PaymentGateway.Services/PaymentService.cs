@@ -28,7 +28,7 @@ namespace Checkout.PaymentGateway.Services
 		/// </summary>
 		/// <param name="paymentRequest"></param>
 		/// <returns></returns>
-		public async Task<SubmitPaymentResponseDto> AttemptPaymentAsync(SubmitPaymentRequestDto paymentRequest)
+		public async Task<SubmitPaymentResponseDto> ProcessPaymentAsync(SubmitPaymentRequestDto paymentRequest)
 		{
 			// Convert to domain objects/entities and save to DB.
 			var cardDetails = paymentRequest.ToCardDetailsDomainObject();
