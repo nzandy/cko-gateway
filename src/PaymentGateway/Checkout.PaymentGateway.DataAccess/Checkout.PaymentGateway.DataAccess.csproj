@@ -5,7 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Checkout.PaymentGateway.Domain\Checkout.PaymentGateway.Domain.csproj" />
+    <ProjectReference Include="..\..\Shared\Checkout.Shared.Models\Checkout.Shared.Models.csproj" />
   </ItemGroup>
 
 </Project>

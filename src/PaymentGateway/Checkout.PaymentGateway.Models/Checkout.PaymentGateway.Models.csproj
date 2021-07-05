@@ -5,6 +5,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="ISO.4217.CurrencyCodes" Version="1.0.9" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\..\Shared\Checkout.Shared.Models\Checkout.Shared.Models.csproj" />
   </ItemGroup>
 

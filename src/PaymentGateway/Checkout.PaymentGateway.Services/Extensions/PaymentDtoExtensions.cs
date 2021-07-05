@@ -1,5 +1,4 @@
-﻿using Checkout.PaymentGateway.Domain;
-using Checkout.PaymentGateway.Models;
+﻿using Checkout.PaymentGateway.DataAccess.Entities;
 using Checkout.PaymentGateway.Models.Requests;
 
 namespace Checkout.PaymentGateway.Services.Extensions

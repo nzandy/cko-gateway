@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Threading.Tasks;
-using Checkout.PaymentGateway.Domain;
+using Checkout.PaymentGateway.DataAccess.Entities;
 
 namespace Checkout.PaymentGateway.DataAccess
 {

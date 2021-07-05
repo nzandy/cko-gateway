@@ -4,6 +4,7 @@ using Checkout.PaymentGateway.Models.Requests;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Checkout.PaymentGateway.Services;
+using Checkout.Shared.Models;
 
 namespace Checkout.PaymentGateway.Api.Controllers
 {
@@ -24,11 +25,20 @@ namespace Checkout.PaymentGateway.Api.Controllers
 		public async Task<IActionResult> SubmitPayment([FromBody]SubmitPaymentRequestDto paymentRequest)
 		{
 			var result = await _paymentService.AttemptPaymentAsync(paymentRequest);
-			return CreatedAtAction(nameof(GetPayment), new { id = result.PaymentId }, result);
+
+			return result.PaymentResult switch
+			{
+				PaymentResult.Succeeded => CreatedAtAction(nameof(GetPayment), new { id = result.PaymentId.Value },
+					result),
+				PaymentResult.Declined => BadRequest(),
+				PaymentResult.Pending => BadRequest(),
+				_ => throw new ArgumentOutOfRangeException()
+			};
+
 		}
 
 		[HttpGet]
-		[Route("[controller]/{id:guid}")]
+		[Route("{id:guid}")]
 		public async Task<IActionResult> GetPayment(Guid id)
 		{
 			var result = await _paymentService.GetPaymentAsync(id);

@@ -2,7 +2,7 @@
 using System.Threading.Tasks;
 using Checkout.AcquiringBank.Services;
 using Checkout.PaymentGateway.DataAccess;
-using Checkout.PaymentGateway.Domain;
+using Checkout.PaymentGateway.DataAccess.Entities;
 using Checkout.PaymentGateway.Models.Requests;
 using Checkout.PaymentGateway.Models.Responses;
 using Checkout.PaymentGateway.Services.Extensions;
@@ -23,6 +23,11 @@ namespace Checkout.PaymentGateway.Services
 			_acquiringBankService = acquiringBankService;
 		}
 
+		/// <summary>
+		/// Sends payment to Acquiring Bank and stores payment & card data.
+		/// </summary>
+		/// <param name="paymentRequest"></param>
+		/// <returns></returns>
 		public async Task<SubmitPaymentResponseDto> AttemptPaymentAsync(SubmitPaymentRequestDto paymentRequest)
 		{
 			// Convert to domain objects/entities and save to DB.
@@ -32,11 +37,12 @@ namespace Checkout.PaymentGateway.Services
 			await SavePaymentEntities(cardDetails, payment);
 
 			// Send to Acquiring Bank for processing.
-			var result = await SendPaymentRequestToAcquringBankAndUpdateEntity(paymentRequest, payment);
+			var result = await SendPaymentRequestToAcquringBankAndUpdatePaymentResult(paymentRequest, payment);
 
 			// Prepare response.
 			var response = new SubmitPaymentResponseDto
 			{
+				PaymentId = payment.Id,
 				PaymentResult = result
 			};
 			return response;
@@ -71,7 +77,7 @@ namespace Checkout.PaymentGateway.Services
 			};
 		}
 
-		private async Task<PaymentResult> SendPaymentRequestToAcquringBankAndUpdateEntity(SubmitPaymentRequestDto paymentRequest, Payment payment)
+		private async Task<PaymentResult> SendPaymentRequestToAcquringBankAndUpdatePaymentResult(SubmitPaymentRequestDto paymentRequest, Payment payment)
 		{
 			// Send request to Acquiring Bank and update Payment in DB with result.
 			var result = await _acquiringBankService.ProcessPaymentAsync(paymentRequest);

@@ -1,7 +1,7 @@
 ﻿using System;
 using Checkout.Shared.Models;
 
-namespace Checkout.PaymentGateway.Domain
+namespace Checkout.PaymentGateway.DataAccess.Entities
 {
 	public class Payment : MerchantEntity
 	{

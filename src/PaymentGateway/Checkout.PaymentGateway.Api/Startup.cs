@@ -1,6 +1,6 @@
 using Checkout.AcquiringBank.Services;
 using Checkout.PaymentGateway.DataAccess;
-using Checkout.PaymentGateway.Domain;
+using Checkout.PaymentGateway.DataAccess.Entities;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;

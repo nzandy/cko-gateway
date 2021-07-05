@@ -1,13 +1,10 @@
-﻿using System;
-using System.Text.RegularExpressions;
-
-namespace Checkout.PaymentGateway.Domain
+﻿namespace Checkout.PaymentGateway.DataAccess.Entities
 {
 	public class CardDetails : MerchantEntity
 	{
 		public string CardNumber { get; set; }
-		public string ExpiryYear { get; set; }
-		public string ExpiryMonth { get; set; }
+		public int ExpiryYear { get; set; }
+		public int ExpiryMonth { get; set; }
 
 		public string MaskedCardNumber
 		{

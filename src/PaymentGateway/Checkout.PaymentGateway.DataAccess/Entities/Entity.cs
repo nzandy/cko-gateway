@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Checkout.PaymentGateway.Domain
+namespace Checkout.PaymentGateway.DataAccess.Entities
 {
 	public abstract class Entity
 	{

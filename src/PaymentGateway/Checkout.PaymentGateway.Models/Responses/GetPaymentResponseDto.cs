@@ -11,7 +11,7 @@ namespace Checkout.PaymentGateway.Models.Responses
 		public string Currency { get; set; }
 		public int MerchantId { get; set; }
 		public string MaskedCardNumber { get; set; }
-		public string ExpiryYear { get; set; }
-		public string ExpiryMonth { get; set; }
+		public int ExpiryYear { get; set; }
+		public int ExpiryMonth { get; set; }
 	}
 }
