@@ -1,7 +1,7 @@
 # Checkout Payment Gateway
 _Author: Andy Davies._
 
-#### Steps to use (pretty simple):
+#### Steps to use (pretty straightforward):
 1. Clone Repo.
 2. Run Checkout.PaymentGateway.Api
 3. Use postman to test the endpoints.
