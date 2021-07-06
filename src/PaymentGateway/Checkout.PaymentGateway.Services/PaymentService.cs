@@ -48,11 +48,13 @@ namespace Checkout.PaymentGateway.Services
 			return response;
 		}
 
-		public async Task<GetPaymentResponseDto> GetPaymentAsync(Guid paymentId)
+		public async Task<GetPaymentResponseDto> GetPaymentAsync(Guid paymentId, int merchantId)
 		{
 			var payment = await _paymentRepo.GetByIdAsync(paymentId);
 
-			if (payment == null)
+			// If merchant ID is different, we should return 404 rather than say, unauthorized
+			// as that would be a security hole where consumers could scan for paymentIDs.
+			if (payment == null || payment.MerchantId != merchantId)
 			{
 				return null;
 			}

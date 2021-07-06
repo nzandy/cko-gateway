@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 using Checkout.PaymentGateway.DataAccess.Entities;
 
@@ -25,7 +26,7 @@ namespace Checkout.PaymentGateway.DataAccess
 		public async Task<T> GetByIdAsync(Guid id)
 		{
 			await Task.Delay(200);
-			return _entities[id];
+			return _entities.TryGetValue(id, out var value) ? value : null;
 		}
 
 		public async Task InsertAsync(T entity)

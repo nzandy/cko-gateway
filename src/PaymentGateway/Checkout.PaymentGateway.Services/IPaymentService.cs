@@ -8,6 +8,6 @@ namespace Checkout.PaymentGateway.Services
 	public interface IPaymentService
 	{
 		public Task<SubmitPaymentResponseDto> ProcessPaymentAsync(SubmitPaymentRequestDto paymentRequest);
-		public Task<GetPaymentResponseDto> GetPaymentAsync(Guid paymentId);
+		public Task<GetPaymentResponseDto> GetPaymentAsync(Guid paymentId, int merchantId);
 	}
 }

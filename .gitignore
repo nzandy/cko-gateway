@@ -23,3 +23,5 @@
 /tests/Checkout.PaymentGateway.Models.UnitTests/obj
 /src/AcquringBank/Checkout.AcquiringBank.Services/bin/Debug/net5.0
 /src/AcquringBank/Checkout.AcquiringBank.Services/obj
+/tests/Checkout.PaymentGateway.Services.UnitTests/bin/Debug/net5.0
+/tests/Checkout.PaymentGateway.Services.UnitTests/obj

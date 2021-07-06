@@ -48,12 +48,13 @@ namespace Checkout.PaymentGateway.Api.Controllers
 		/// Fetch payment details by ID.
 		/// </summary>
 		/// <param name="id">Payment ID</param>
+		/// <param name="merchantId"></param>
 		/// <returns>json containing payment information.</returns>
 		[HttpGet]
 		[Route("{id:guid}")]
-		public async Task<IActionResult> GetPayment(Guid id)
+		public async Task<IActionResult> GetPayment(Guid id, [FromQuery]int merchantId) // In real world, merchant ID would come from auth claim, not querystring.
 		{
-			var result = await _paymentService.GetPaymentAsync(id);
+			var result = await _paymentService.GetPaymentAsync(id, merchantId);
 			if (result == null)
 			{
 				return NotFound();

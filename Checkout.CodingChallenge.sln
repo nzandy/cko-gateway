@@ -25,14 +25,16 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{932550A1-6C2
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{E141EB69-BADC-4981-BED3-67B323F9486B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Checkout.PaymentGateway.Api.UnitTests", "tests\Checkout.PaymentGateway.Api.UnitTests\Checkout.PaymentGateway.Api.UnitTests.csproj", "{644586C8-A770-4C6D-BF90-BFE979441AEB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Checkout.PaymentGateway.Api.UnitTests", "tests\Checkout.PaymentGateway.Api.UnitTests\Checkout.PaymentGateway.Api.UnitTests.csproj", "{644586C8-A770-4C6D-BF90-BFE979441AEB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Checkout.PaymentGateway.Models.UnitTests", "tests\Checkout.PaymentGateway.Models.UnitTests\Checkout.PaymentGateway.Models.UnitTests.csproj", "{92D213F2-5C64-46F0-AFEB-0DFF21D0A0EF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Checkout.PaymentGateway.Models.UnitTests", "tests\Checkout.PaymentGateway.Models.UnitTests\Checkout.PaymentGateway.Models.UnitTests.csproj", "{92D213F2-5C64-46F0-AFEB-0DFF21D0A0EF}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{C9C71CAB-B529-4ACD-8206-7B90FAE376B0}"
 	ProjectSection(SolutionItems) = preProject
 		README.md = README.md
 	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Checkout.PaymentGateway.Services.UnitTests", "tests\Checkout.PaymentGateway.Services.UnitTests\Checkout.PaymentGateway.Services.UnitTests.csproj", "{BA716A6E-35EF-47C7-87A0-4B918F49F943}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -72,6 +74,10 @@ Global
 		{92D213F2-5C64-46F0-AFEB-0DFF21D0A0EF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{92D213F2-5C64-46F0-AFEB-0DFF21D0A0EF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{92D213F2-5C64-46F0-AFEB-0DFF21D0A0EF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BA716A6E-35EF-47C7-87A0-4B918F49F943}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BA716A6E-35EF-47C7-87A0-4B918F49F943}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BA716A6E-35EF-47C7-87A0-4B918F49F943}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BA716A6E-35EF-47C7-87A0-4B918F49F943}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -88,6 +94,7 @@ Global
 		{82B8AC93-CB34-4B8E-AA01-335234A214CF} = {C4312387-556B-41B3-A249-228B78290C29}
 		{644586C8-A770-4C6D-BF90-BFE979441AEB} = {E141EB69-BADC-4981-BED3-67B323F9486B}
 		{92D213F2-5C64-46F0-AFEB-0DFF21D0A0EF} = {E141EB69-BADC-4981-BED3-67B323F9486B}
+		{BA716A6E-35EF-47C7-87A0-4B918F49F943} = {E141EB69-BADC-4981-BED3-67B323F9486B}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {50D3B8F8-6253-4F49-9F0B-E385999ED8BB}

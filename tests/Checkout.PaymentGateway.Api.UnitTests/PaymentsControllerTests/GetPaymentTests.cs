@@ -14,6 +14,7 @@ namespace Checkout.PaymentGateway.Api.UnitTests.PaymentsControllerTests
 	{
 		private PaymentsController _sut;
 		private Mock<IPaymentService> _paymentServiceMock;
+		private const int MerchantId = 1;
 
 		[SetUp]
 		public void Setup()
@@ -34,14 +35,15 @@ namespace Checkout.PaymentGateway.Api.UnitTests.PaymentsControllerTests
 				ExpiryMonth = 12,
 				ExpiryYear = 2099,
 				Id = paymentId,
-				MaskedCardNumber = "4444********1111"
+				MaskedCardNumber = "4444********1111",
+				MerchantId = MerchantId
 			};
-			_paymentServiceMock.Setup(paymentService => paymentService.GetPaymentAsync(paymentId))
+			_paymentServiceMock.Setup(paymentService => paymentService.GetPaymentAsync(paymentId, MerchantId))
 				.ReturnsAsync(paymentResponseDto);
 
 			
 			// Act.
-			var response = (OkObjectResult) await _sut.GetPayment(paymentId);
+			var response = (OkObjectResult) await _sut.GetPayment(paymentId, MerchantId);
 			var actualResponseDto = (GetPaymentResponseDto) response.Value;
 			
 			
@@ -59,12 +61,12 @@ namespace Checkout.PaymentGateway.Api.UnitTests.PaymentsControllerTests
 			// Arrange.
 			var paymentId = Guid.NewGuid();
 
-			_paymentServiceMock.Setup(paymentService => paymentService.GetPaymentAsync(paymentId))
+			_paymentServiceMock.Setup(paymentService => paymentService.GetPaymentAsync(paymentId, MerchantId))
 				.ReturnsAsync((GetPaymentResponseDto)null);
 
 
 			// Act.
-			var response = await _sut.GetPayment(paymentId);
+			var response = await _sut.GetPayment(paymentId, MerchantId);
 
 			// Assert.
 			Assert.That(response, Is.TypeOf<NotFoundResult>());
