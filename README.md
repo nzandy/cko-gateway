@@ -11,7 +11,7 @@ _Author: Andy Davies._
 #### Random points of interest
 * Pretty simple [n-tier](https://docs.microsoft.com/en-us/azure/architecture/guide/architecture-styles/n-tier) architecture pattern.
   * Controller => Service Layer => Data Access Layer.
-  * No time to implement any fancing CQRS/event sourcing/proper DDD aggregate stuff.
+  * No time to implement any fancy CQRS/event sourcing/proper DDD aggregate stuff.
   * Have focused on writing simple, clean easy to read code.
 * Utilising custom model validators for currency code & expiry year.
   * Utilising "ISO.\_4217" nuget package as it looked sufficient to validate currency code
