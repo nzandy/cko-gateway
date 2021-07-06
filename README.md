@@ -9,6 +9,7 @@ _Author: Andy Davies._
 
 #### Random points of interest
 * Pretty simple [n-tier](https://docs.microsoft.com/en-us/azure/architecture/guide/architecture-styles/n-tier) architecture pattern.
+  * Controller => Service Layer => Data Access Layer.
 * Utilising custom model validators for currency code & expiry year.
   * Utilising "ISO.\_4217" nuget package as it looked sufficient to validate currency code
 * Store Card & Payment information as seperate entities (if we want to retrieve card details independently)
