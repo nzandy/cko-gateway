@@ -5,7 +5,7 @@ namespace Checkout.PaymentGateway.Services.Extensions
 {
 	public static class PaymentDtoExtensions
 	{
-		public static CardDetails ToCardDetailsDomainObject(this SubmitPaymentRequestDto dto)
+		public static CardDetails ToCardDetailsEntity(this SubmitPaymentRequestDto dto)
 		{
 			return new CardDetails
 			{
@@ -16,7 +16,7 @@ namespace Checkout.PaymentGateway.Services.Extensions
 			};
 		}
 
-		public static Payment ToPaymentDomainObject(this SubmitPaymentRequestDto dto)
+		public static Payment ToPaymentEntity(this SubmitPaymentRequestDto dto)
 		{
 			return new Payment
 			{
