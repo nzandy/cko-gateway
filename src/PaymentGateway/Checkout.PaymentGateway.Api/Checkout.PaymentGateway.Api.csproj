@@ -9,6 +9,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\AcquringBank\Checkout.AcquiringBank.Services\Checkout.AcquiringBank.Services.csproj" />
     <ProjectReference Include="..\Checkout.PaymentGateway.Services\Checkout.PaymentGateway.Services.csproj" />
   </ItemGroup>
   <PropertyGroup>

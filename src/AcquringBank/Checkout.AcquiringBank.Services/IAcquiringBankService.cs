@@ -1,5 +1,4 @@
 ﻿using System.Threading.Tasks;
-using Checkout.PaymentGateway.Models;
 using Checkout.PaymentGateway.Models.Requests;
 using Checkout.Shared.Models;
 
