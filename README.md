@@ -6,7 +6,7 @@ _Author: Andy Davies._
 2. Run Checkout.PaymentGateway.Api
 3. Use postman to test the endpoints.
 4. I have added test postman script for POST and GET. See cko-gateway/CheckoutGatewayAPI.postman_collection.json.
-5. First run POST, fetch the returned ID, and use this in the GET path to retrieve its details.
+5. First run POST, fetch the returned ID, and use this in the GET path to retrieve its details. Ensure MerchantID matches POST and GET.
 
 #### Random points of interest
 * Pretty simple [n-tier](https://docs.microsoft.com/en-us/azure/architecture/guide/architecture-styles/n-tier) architecture pattern.
@@ -28,6 +28,9 @@ _Author: Andy Davies._
 
 #### Limitations of Code/Shortcuts taken. (Given time constraint):
 * No auth.
+  * Although have semi mimmicked this - we pass merchantID as a query param to GET
+  * If merchant ID doesn't match merchant ID for payment, we return 404.
+  * In real world merchant ID would be added as a claim during auth rather than passed in querystring.
 * No logging.
 * Low test coverage. I have written a few examples, so you can see how I test/frameworks used etc.
 * Have created an in memory repository implementation for quick POC.
