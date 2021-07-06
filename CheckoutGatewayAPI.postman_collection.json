@@ -18,7 +18,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"amount\": 20.0,\r\n    \"currency\": \"AUD\",\r\n    \"cardDetails\": {\r\n        \"cardNumber\": \"4621977792064149\",\r\n        \"expiryYear\": 2021,\r\n        \"expiryMonth\": 12\r\n    },\r\n    \"merchantId\": 2\r\n}"
+					"raw": "{\r\n    \"amount\": 20.0,\r\n    \"currency\": \"AUD\",\r\n    \"cardDetails\": {\r\n        \"cardNumber\": \"4621977792064149\",\r\n        \"expiryYear\": 2021,\r\n        \"expiryMonth\": 12\r\n    },\r\n    \"merchantId\": 1\r\n}"
 				},
 				"url": {
 					"raw": "https://localhost:44326/payments",
@@ -40,7 +40,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "https://localhost:44326/payments/59121407-c8c7-4c83-b207-32855c8eec2a",
+					"raw": "https://localhost:44326/payments/d4870c59-1fbd-43a4-9d03-a2e15e259f40?merchantId=1",
 					"protocol": "https",
 					"host": [
 						"localhost"
@@ -48,7 +48,13 @@
 					"port": "44326",
 					"path": [
 						"payments",
-						"59121407-c8c7-4c83-b207-32855c8eec2a"
+						"d4870c59-1fbd-43a4-9d03-a2e15e259f40"
+					],
+					"query": [
+						{
+							"key": "merchantId",
+							"value": "1"
+						}
 					]
 				}
 			},

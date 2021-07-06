@@ -48,7 +48,7 @@ namespace Checkout.PaymentGateway.Api.Controllers
 		/// Fetch payment details by ID.
 		/// </summary>
 		/// <param name="id">Payment ID</param>
-		/// <param name="merchantId"></param>
+		/// <param name="merchantId">The merchants unique id.</param>
 		/// <returns>json containing payment information.</returns>
 		[HttpGet]
 		[Route("{id:guid}")]
