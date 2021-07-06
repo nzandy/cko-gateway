@@ -49,6 +49,7 @@ namespace Checkout.PaymentGateway.Services.UnitTests
 			Assert.That(result.ExpiryMonth, Is.EqualTo(cardDetails.ExpiryMonth));
 			Assert.That(result.ExpiryYear, Is.EqualTo(cardDetails.ExpiryYear));
 			Assert.That(result.Id, Is.EqualTo(payment.Id));
+			Assert.That(result.MaskedCardNumber, Is.EqualTo("378282XXXXX0005"));
 			Assert.That(result.Result, Is.EqualTo(PaymentResult.Succeeded));
 		}
 
