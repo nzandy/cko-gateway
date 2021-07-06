@@ -1,15 +1,18 @@
 # Checkout Payment Gateway
 _Author: Andy Davies._
 
-#### Steps to use (pretty simple):
+#### Steps to use (pretty straightforward):
 1. Clone Repo.
 2. Run Checkout.PaymentGateway.Api
 3. Use postman to test the endpoints.
-4. I have added test postman script for POST and GET. See cko-gateway/CheckoutGatewayAPI.postman_collection.json
+4. I have added test postman script for POST and GET. See cko-gateway/CheckoutGatewayAPI.postman_collection.json.
+5. First run POST, fetch the returned ID, and use this in the GET path to retrieve its details.
 
 #### Random points of interest
 * Pretty simple [n-tier](https://docs.microsoft.com/en-us/azure/architecture/guide/architecture-styles/n-tier) architecture pattern.
   * Controller => Service Layer => Data Access Layer.
+  * No time to implement any fancing CQRS/event sourcing/proper DDD aggregate stuff.
+  * Have focused on writing simple, clean easy to read code.
 * Utilising custom model validators for currency code & expiry year.
   * Utilising "ISO.\_4217" nuget package as it looked sufficient to validate currency code
 * Store Card & Payment information as seperate entities (if we want to retrieve card details independently)
