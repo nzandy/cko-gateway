@@ -15,7 +15,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Checkout.PaymentGateway.Dat
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "AcquiringBank", "AcquiringBank", "{D82D3657-1881-4F06-9E96-EE8493BE75E6}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Checkout.AcquiringBank.Services", "src\AcquringBank\ThirdParty.AcquiringBank.Services\Checkout.AcquiringBank.Services.csproj", "{61DC5043-9F74-4705-A415-320A918913C5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Checkout.AcquiringBank.Services", "src\AcquringBank\Checkout.AcquiringBank.Services\Checkout.AcquiringBank.Services.csproj", "{61DC5043-9F74-4705-A415-320A918913C5}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Shared", "Shared", "{C4312387-556B-41B3-A249-228B78290C29}"
 EndProject
