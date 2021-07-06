@@ -11,13 +11,13 @@ namespace Checkout.PaymentGateway.DataAccess
 	/// I have decided to add some async behaviour / delays to mimic a real DB.
 	/// </summary>
 	/// <typeparam name="T"></typeparam>
-	public class GenericRepository<T> : IGenericRepository<T> where T : Entity
+	public class EntityRepository<T> : IEntityRepository<T> where T : Entity
 	{
 		// Not threadsafe. I would have used ConcurrentDictionary but the update functionality
 		// was going to add too much complexity for my given implementation timespan.
 		private readonly Dictionary<Guid,T> _entities;
 
-		public GenericRepository()
+		public EntityRepository()
 		{
 			_entities = new Dictionary<Guid, T>();
 		}

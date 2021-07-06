@@ -12,11 +12,11 @@ namespace Checkout.PaymentGateway.Services
 {
 	public class PaymentService : IPaymentService
 	{
-		private readonly IGenericRepository<CardDetails> _cardDetailsRepo;
-		private readonly IGenericRepository<Payment> _paymentRepo;
+		private readonly IEntityRepository<CardDetails> _cardDetailsRepo;
+		private readonly IEntityRepository<Payment> _paymentRepo;
 		private readonly IAcquiringBankService _acquiringBankService;
 
-		public PaymentService(IGenericRepository<CardDetails> cardDetailsRepo, IGenericRepository<Payment> paymentRepo, IAcquiringBankService acquiringBankService)
+		public PaymentService(IEntityRepository<CardDetails> cardDetailsRepo, IEntityRepository<Payment> paymentRepo, IAcquiringBankService acquiringBankService)
 		{
 			_cardDetailsRepo = cardDetailsRepo;
 			_paymentRepo = paymentRepo;

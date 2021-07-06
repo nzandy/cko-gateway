@@ -37,8 +37,8 @@ namespace Checkout.PaymentGateway.Api
 
 			services.AddScoped<IPaymentService, PaymentService>();
 			services.AddScoped<IAcquiringBankService, MockAcquiringBankService>();
-			services.AddSingleton<IGenericRepository<CardDetails>, GenericRepository<CardDetails>>();
-			services.AddSingleton<IGenericRepository<Payment>, GenericRepository<Payment>>();
+			services.AddSingleton<IEntityRepository<CardDetails>, EntityRepository<CardDetails>>();
+			services.AddSingleton<IEntityRepository<Payment>, EntityRepository<Payment>>();
 		}
 
 		public void Configure(IApplicationBuilder app, IWebHostEnvironment env)

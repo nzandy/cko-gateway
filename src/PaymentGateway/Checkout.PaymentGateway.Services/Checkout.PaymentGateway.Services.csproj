@@ -6,7 +6,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\AcquringBank\Checkout.AcquiringBank.Services\Checkout.AcquiringBank.Services.csproj" />
-    <ProjectReference Include="..\..\AcquringBank\ThirdParty.AcquiringBank.Services\Checkout.AcquiringBank.Services.csproj" />
     <ProjectReference Include="..\Checkout.PaymentGateway.DataAccess\Checkout.PaymentGateway.DataAccess.csproj" />
     <ProjectReference Include="..\Checkout.PaymentGateway.Models\Checkout.PaymentGateway.Models.csproj" />
   </ItemGroup>
